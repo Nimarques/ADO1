@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        body {
+            background-color: #0e5719;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 1000px;
+            padding: 70px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .curriculo-header {
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
+        }
+
+        img{
+            width: 200px;
+            height: 250px;
+            margin-right: 40px;
+            margin-left: 10px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        h3 {
+            color: #0f0e0e;
+            display: flex;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="curriculo-header">
+            <img src="https://media.licdn.com/dms/image/C5603AQFYb8Y5jN1mDA/profile-displayphoto-shrink_800_800/0/1660772742895?e=1701302400&v=beta&t=mx5wh4tHJ0GJl8DMUGmxwcooMoW9k5bOLbbGKsnphmg">
+            <div>
+                <h1 th:text="${nome}">nome</h1>
+                <p th:text="${skil}">skil</p>
+
+                <p th:text="${telefone}">telefone</p>
+                <p th:text="${email}">email</p>
+                <p th:text="${idade}">idade</p>
+                <p th:text="${civil}">civil</p>
+            </div>
+        </div>
+        <div class="curriculo-corpo">
+            <h3>Objetivo</h3>
+            <p th:text="${objetivo}">objetivo</p>
+
+            <h3>Sumário das Qualificações </h3>
+            <p th:text="${qualificacao}">qualificacao</p>
+
+            <h3>Cursos e Certificações</h3>
+            <p th:text="${cursos}">cursos</p>
+
+            <h3>Experiencia Profissional</h3>
+            <p th:text="${experiencia}">experiencia</p>
+
+            <h3>Github</h3>
+            <p th:text="${github}">github</p>
+        </div>
+    </div>
+</body>
+</html>
